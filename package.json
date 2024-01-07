@@ -2,10 +2,13 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://danielkroiss.github.io/portfolio/",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "private": true,
@@ -19,10 +22,10 @@
   "bugs": {
     "url": "https://github.com/DanielKroiss/portfolio/issues"
   },
-  "homepage": "https://github.com/DanielKroiss/portfolio#readme",
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.6.0",
     "postcss": "^8.4.33",
     "postcss-loader": "^7.3.4",
