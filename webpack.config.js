@@ -16,6 +16,13 @@ module.exports = {
                 include: path.resolve(__dirname, 'src'),
                 use: ['style-loader', 'css-loader', 'postcss-loader'],
             },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '/images/[name].[ext]'
+                }
+            }
         ],
     },
     devServer: {

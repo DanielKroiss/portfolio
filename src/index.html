@@ -3,9 +3,213 @@
   <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">Hi, I am Daniel!</h1>
     <script src="./bundle.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="p-12 hero-area bg-cover bg-center bg-no-repeat">
+        <div
+          id="header"
+          class="h-40 text-4xl header-container relative"
+        >
+          <a href="#home" class="active w-0.5">
+            <svg class="w-11" id="logo" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 84 96"><title>
+              Logo</title>
+              <g transform="translate(-8.000000, -2.000000)">
+                <g transform="translate(11.000000, 5.000000)">
+                  <polygon
+                    id="Shape"
+                    stroke="currentColor"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    points="39 0 0 22 0 67 39 90 78 68 78 23"
+                  ></polygon>
+                </g>
+              </g>
+              <text x="26" y="65" fill="currentColor" font-size="50px" font-family="Consolas">C</text>
+            </svg>
+          </a>
+          <a class="menu-link" href="#about-me">Über mich</a>
+          <a class="menu-link" href="#services">Leistungen</a>
+          <a class="menu-link" href="#form">Kontakt</a>
+          <a
+            class="hamburger-icon cursor-pointer absolute right-0 z-10"
+            id="hamburger"
+          >
+            <img width="100" height="100" src="images/hamburger.svg" alt="">
+          </a>
+        </div>
+        <div id="mobile-menu" class="mobile-menu" style="display: none">
+          <div>
+            <a class="menu-link py-10 text-4xl" href="#about-me">Über mich</a>
+            <a class="menu-link py-10 text-4xl" href="#services">Leistungen</a>
+            <a class="menu-link py-10 text-4xl" href="#form">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="intro" id="home">
+      <div class="intro_text_area">
+        <h1 class="section__title section__title--intro">
+          Hi, I'm <strong>Daniel</strong>
+        </h1>
+        <span class="section__subtitle section__subtitle--intro">
+          <span class="ml3">full-stack dev</span>
+        </span>
+      </div>
+      <div class="intro_img_area">
+        <div class="intro_second_bar into_bar"></div>
+        <div class="intro_first_bar into_bar"></div>
+        <img src="images/daniel-1.jpg" alt="" class="intro__img" />
+      </div>
+    </section>
+
+
+    <div
+      style="
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: auto;
+    right: 40px;
+    z-index: 10;
+  "
+    >
+      <div
+        class="dvseSq" style="
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;"
+      >
+        <a
+          href="mailto:chandrikadeb7@gmail.com"
+          style="
+    letter-spacing: 0.1em;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    margin: 20px auto;
+    padding: 10px;"
+        >tesemail@gmx.at</a></div>
+    </div>
+    <main class="container">
+
+      <!-- hero -->
+      <section class="p-20">
+        <div class="container mx-auto">
+          <div class="flex justify-center">
+            <div class="flex flex-col gap-5 text-center">
+              <img
+                class="rounded-full bg-gray-50 h-52 w-56 mx-auto"
+                src="https://rabiulislam.dev/documents/images/portfolio/logo.png"
+              />
+              <div class="flex flex-col gap-3">
+                <h1 class="font-bold text-6xl">Daniel Kroiss</h1>
+                <p class="text-gray-500 text-sm">Software Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- about me -->
+      <section id="about" class="sm:p-10 lg:p-20">
+        <div class="container mx-auto">
+          <div class="sm:columns-2">
+            <img
+              class="sm:w-1/2 mb-10 sm:mb-0"
+              src="https://rabiulislam.dev/documents/images/portfolio/user-full-stack-development-rabiul-islam.png"
+            />
+            <div>
+              <h2 class="text-bold text-2xl mb-3">Full Stack Web Developer</h2>
+              <p class="mb-5 text-sm text-gray-400">Providing web solutions</p>
+              <p class="text-gray-500 text-justify leading-10">
+                Hello there! I'm a full stack web developer, and I'm very passionate and dedicated to my
+                work.
+                With more than 5 years of experience as a professional web developer,
+                With this time period I have acquired the skills and knowledge necessary to make your
+                project a success.
+                I enjoy every step of the development process, from discussion and collaboration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- timeline -->
+      <div class="container mx-auto w-full h-full">
+        <div class="relative wrap overflow-hidden p-10 h-full">
+          <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
+          <!-- right timeline -->
+          <div class="mb-8 flex justify-between items-center w-full right-timeline">
+            <div class="order-1 w-5/12"></div>
+            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+            </div>
+            <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">Lorem Ipsum</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book.</p>
+            </div>
+          </div>
+
+          <!-- left timeline -->
+          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div class="order-1 w-5/12"></div>
+            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
+            </div>
+            <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <h3 class="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
+              <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is
+                simply
+                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book.</p>
+            </div>
+          </div>
+
+          <!-- right timeline -->
+          <div class="mb-8 flex justify-between items-center w-full right-timeline">
+            <div class="order-1 w-5/12"></div>
+            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+            </div>
+            <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">Lorem Ipsum</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book.</p>
+            </div>
+          </div>
+
+          <!-- left timeline -->
+          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div class="order-1 w-5/12"></div>
+            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
+            </div>
+            <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <h3 class="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
+              <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is
+                simply
+                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
   </body>
 </html>

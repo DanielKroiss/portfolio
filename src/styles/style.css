@@ -3,6 +3,207 @@
 @tailwind utilities;
 
 
-body {
-    background-color: antiquewhite;
+:root {
+    --ff-primary: "Source Sans Pro", sans-serif;
+    --ff-secondary: "Source Code Pro", monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-medium-dark: #494848;
+    --clr-accent: #16e0bd;
+
+    --fs-h1: 3.5rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+main.container {
+    padding: 0 150px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+    min-height: 100vh;
+}
+
+
+
+.dvseSq::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: rgb(168, 178, 209);
+}
+
+
+
+/*header*/
+.header-container {
+    overflow: hidden;
+}
+
+.header-container a {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header-container a:not(:last-child) {
+    margin-right: 85px;
+}
+
+.header-container a:hover {
+    color: red;
+}
+
+.heaheader-containerder a.active {
+    color: white;
+}
+
+.header-container .hamburger-icon {
+    display: none;
+}
+
+.logo {
+    min-width: 180px;
+}
+
+.hamburger-icon > svg {
+    fill: black;
+    height: 30px;
+}
+
+.hamburger-icon > svg:hover {
+    fill: yellowgreen;
+    height: 30px;
+}
+
+@media screen and (min-width: 600px) {
+    .header-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .header-container a:first-child {
+        position: absolute;
+        left: 0;
+    }
+
+    .header-container a:not(:first-child) {
+        display: none;
+    }
+
+    .header-container a.hamburger-icon {
+        float: right;
+        display: block;
+    }
+
+    .header-container.responsive {
+        position: relative;
+        overflow: inherit;
+    }
+
+    .header-container.responsive .hamburger-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        top: 0;
+        background-color: green;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        animation-name: fadein;
+        animation-duration: 0.5s;
+    }
+
+    @keyframes fadein {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+
+    .mobile-menu div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+    }
+}
+
+
+/*intro section*/
+
+
+/*  Intro section  */
+
+.intro {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(1, 95, 95);
+    color: var(--clr-light);
+    padding: 0;
+}
+.intro_img_area {
+    height: 100%;
+    min-width: 315px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+
+.intro_first_bar {
+    background-color: var(--clr-accent);
+}
+
+.intro_second_bar {
+    background-color: rgb(1, 128, 128);
+}
+
+.into_bar {
+    width: 8%;
+    min-width: 55px;
+    height: 120%;
+    /*display: -webkit-inline-box;*/
+    transform: rotate3d(1, 1, 1, -9deg);
+    transform-origin: left top;
+    z-index: 1;
+}
+
+.section__subtitle--intro {
+    display: inline-block;
+    margin-bottom: 1em;
 }
