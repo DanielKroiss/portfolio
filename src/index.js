@@ -14,6 +14,9 @@ import './images/teide.jpg';
 // import './images/teide.avif';
 // import './images/teide.webp';
 
+import './images/favicon-32x32.png';
+
+
 import './timeline.js'
 
 
