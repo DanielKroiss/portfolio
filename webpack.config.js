@@ -17,10 +17,10 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'postcss-loader'],
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
-                loader: 'file-loader',
-                options: {
-                    name: '/images/[name].[ext]'
+                test: /\.(png|jpe?g|gif|avif|webp|svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]'
                 }
             }
         ],

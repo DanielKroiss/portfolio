@@ -1,32 +1,81 @@
 import './styles/style.css';
+import './styles/progress.css';
+import './styles/queries.css';
 import './images/daniel-1.jpg';
-import './images/hamburger.svg';
+// import './images/daniel-1.avif';
+// import './images/daniel-1.webp';
+
+import './images/fav-icon-dk.jpg';
+
+import './images/programming.jpg';
+// import './images/programming.avif';
+
+import './images/teide.jpg';
+// import './images/teide.avif';
+// import './images/teide.webp';
+
+import './timeline.js'
 
 
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelectorAll(".nav__link");
 
-window.addEventListener("load", () => {
-    initMobileHeaderHandler();
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    document.body.classList.toggle("nav-open");
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      document.body.classList.remove("nav-open");
+    });
+  });
+}
+
+// animated job title
+window.addEventListener("load", function (event) {
+  let textWrapper = document.getElementsByClassName("ml3")[0];
+  textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+  );
+
+  anime
+      .timeline({ loop: true })
+      .add({
+        targets: ".ml3 .letter",
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 200,
+        delay: (el, i) => 150 * (i + 1),
+      })
+      .add({
+        targets: ".ml3",
+        opacity: 0,
+        duration: 200,
+        easing: "easeOutExpo",
+        delay: 1000000,
+      });
 });
 
-function initMobileHeaderHandler() {
-    document.getElementById("hamburger").addEventListener("click", () => {
-        const mobileHeader = document.getElementById("mobile-menu");
-        if (mobileHeader.style.display === "none") {
-            mobileHeader.style.display = "block";
-        } else {
-            mobileHeader.style.display = "none";
-        }
-    });
-    hideMobileHeaderOnMenuClick();
+// fills progressbars
+let initiated = false;
+
+function scrollListener() {
+  const element = document.getElementsByClassName("progress-done")[0];
+  const position = element.getBoundingClientRect();
+  // checking for partial visibility
+  if (position.top < window.innerHeight && position.bottom >= 0) {
+    if (!initiated) {
+      const progress = document.getElementsByClassName("progress-done");
+      for (const el of progress) {
+        el.style.width = el.getAttribute("data-done") + "%";
+        el.style.opacity = 1;
+      }
+      initiated = true;
+      window.removeEventListener("scroll", scrollListener);
+    }
+  }
 }
 
-function hideMobileHeaderOnMenuClick() {
-    const menuLinks = document.getElementsByClassName("menu-link");
-    for (let menuLink of menuLinks) {
-        menuLink.addEventListener("click", () => {
-            if (mobileHeader.style.display === "block") {
-                mobileHeader.style.display = "none";
-            }
-        });
-    }
-}
+window.addEventListener("scroll", scrollListener);

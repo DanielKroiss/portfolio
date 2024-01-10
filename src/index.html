@@ -7,50 +7,61 @@
   </head>
 
   <body>
-
     <header>
-      <div class="p-12 hero-area bg-cover bg-center bg-no-repeat">
-        <div
-          id="header"
-          class="h-40 text-4xl header-container relative"
-        >
-          <a href="#home" class="active w-0.5">
-            <svg class="w-11" id="logo" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 84 96"><title>
-              Logo</title>
-              <g transform="translate(-8.000000, -2.000000)">
-                <g transform="translate(11.000000, 5.000000)">
-                  <polygon
-                    id="Shape"
-                    stroke="currentColor"
-                    stroke-width="5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    points="39 0 0 22 0 67 39 90 78 68 78 23"
-                  ></polygon>
-                </g>
-              </g>
-              <text x="26" y="65" fill="currentColor" font-size="50px" font-family="Consolas">C</text>
-            </svg>
-          </a>
-          <a class="menu-link" href="#about-me">Über mich</a>
-          <a class="menu-link" href="#services">Leistungen</a>
-          <a class="menu-link" href="#form">Kontakt</a>
-          <a
-            class="hamburger-icon cursor-pointer absolute right-0 z-10"
-            id="hamburger"
-          >
-            <img width="100" height="100" src="images/hamburger.svg" alt="">
-          </a>
-        </div>
-        <div id="mobile-menu" class="mobile-menu" style="display: none">
-          <div>
-            <a class="menu-link py-10 text-4xl" href="#about-me">Über mich</a>
-            <a class="menu-link py-10 text-4xl" href="#services">Leistungen</a>
-            <a class="menu-link py-10 text-4xl" href="#form">Kontakt</a>
-          </div>
-        </div>
-      </div>
+      <a class="logo" href="https://daniel-kroiss.com">&lt; daniel kroiss &gt;</a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">What I do</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About me</a>
+          </li>
+          <li class="nav__item">
+            <a href="#work" class="nav__link">My Work</a>
+          </li>
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">Skills</a>
+          </li>
+        </ul>
+      </nav>
     </header>
+
+    <div
+      style="
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: auto;
+    right: 40px;
+    z-index: 10;
+  "
+    >
+      <div
+        style="
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;"
+      >
+        <a
+          href="mailto:daniel_kroiss@gmx.at"
+          style="
+    letter-spacing: 0.1em;
+    color: #16e0bd;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    margin: 20px auto;
+    padding: 10px;"
+        >daniel_kroiss@gmx.at</a></div>
+    </div>
 
     <section class="intro" id="home">
       <div class="intro_text_area">
@@ -64,152 +75,168 @@
       <div class="intro_img_area">
         <div class="intro_second_bar into_bar"></div>
         <div class="intro_first_bar into_bar"></div>
-        <img src="images/daniel-1.jpg" alt="" class="intro__img" />
+        <img src="images//daniel-1.jpg" alt="photo of daniel smiling" class="intro__img" />
+      </div>
+    </section>
+
+    <!-- My services -->
+    <section class="my-services parallax" id="services" aria-label="random person coding with laptop">
+      <h2 class="section__title section__title--services">What I do</h2>
+      <div class="services">
+        <div class="service">
+          <h3>coding</h3>
+          <p>
+            During my studies I discovered my passion for programming and focused my studies on this area. Later, I was
+            able to expand and deepen this knowledge in my professional career. I especially enjoy developing
+            (progressive) web apps using the most suitable technology for the respective use case.
+          </p>
+        </div>
+        <div class="service">
+          <h3>learning</h3>
+          <p>
+            Nobody is perfect. In my opinion, it is especially important to constantly learn and stay up to date. As a
+            developer, I see part of my job in programming, but another big part in educating myself to design competitive
+            software in all aspects.
+          </p>
+        </div>
+        <div class="service">
+          <h3>innovating</h3>
+          <p>
+            New technologies offer an infinite number of possibilities. I especially enjoy working on projects that have a
+            positive impact on our environment and society. Furthermore I enjoy tinkering with innovative
+            dev-projects in my private life.
+          </p>
+        </div>
       </div>
     </section>
 
 
-    <div
-      style="
-    width: 40px;
-    position: fixed;
-    bottom: 0px;
-    left: auto;
-    right: 40px;
-    z-index: 10;
-  "
-    >
-      <div
-        class="dvseSq" style="
-    display: flex;
-    flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    position: relative;"
-      >
-        <a
-          href="mailto:chandrikadeb7@gmail.com"
-          style="
-    letter-spacing: 0.1em;
-    -webkit-writing-mode: vertical-rl;
-    writing-mode: vertical-rl;
-    margin: 20px auto;
-    padding: 10px;"
-        >tesemail@gmx.at</a></div>
-    </div>
-    <main class="container">
+    <!-- About me -->
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about">Who I am</h2>
+      <p class="section__subtitle section__subtitle--about">
+        Developer based in Hamburg
+      </p>
+      <div class="about-me__body">
+        <p>
+          Born in Austria, I picked Hamburg as my new adopted home and immediately fell in love with the city.
+        </p>
+        <p>
+          I have been working as a software developer for several years, preferably in companies where I can have a
+          positive impact on our environment and society. I love how creative this field allows
+          me to be.
+        </p>
+        <p>
+          As a balance to computer work, I like to move in the great outdoors, where you can usually find me on a climbing
+          wall or in the mountains. I love to travel and can order a beer in 10 languages :-)
+        </p>
+      </div>
+      <img src="images//teide.jpg" alt="hiking at teide nationalpark" class="about-me__img" />
+    </section>
 
-      <!-- hero -->
-      <section class="p-20">
-        <div class="container mx-auto">
-          <div class="flex justify-center">
-            <div class="flex flex-col gap-5 text-center">
-              <img
-                class="rounded-full bg-gray-50 h-52 w-56 mx-auto"
-                src="https://rabiulislam.dev/documents/images/portfolio/logo.png"
-              />
-              <div class="flex flex-col gap-3">
-                <h1 class="font-bold text-6xl">Daniel Kroiss</h1>
-                <p class="text-gray-500 text-sm">Software Developer</p>
-              </div>
-            </div>
-          </div>
+    <!-- Timeline 2 -->
+    <section class="my-work" id="work">
+      <div class="container">
+        <div class="top-section">
+          <h1>Companies and professions</h1>
         </div>
-      </section>
-
-      <!-- about me -->
-      <section id="about" class="sm:p-10 lg:p-20">
-        <div class="container mx-auto">
-          <div class="sm:columns-2">
-            <img
-              class="sm:w-1/2 mb-10 sm:mb-0"
-              src="https://rabiulislam.dev/documents/images/portfolio/user-full-stack-development-rabiul-islam.png"
-            />
-            <div>
-              <h2 class="text-bold text-2xl mb-3">Full Stack Web Developer</h2>
-              <p class="mb-5 text-sm text-gray-400">Providing web solutions</p>
-              <p class="text-gray-500 text-justify leading-10">
-                Hello there! I'm a full stack web developer, and I'm very passionate and dedicated to my
-                work.
-                With more than 5 years of experience as a professional web developer,
-                With this time period I have acquired the skills and knowledge necessary to make your
-                project a success.
-                I enjoy every step of the development process, from discussion and collaboration.
+        <div class="timeline">
+          <div class="line"></div>
+          <div class="section">
+            <div class="bead"></div>
+            <div class="content">
+              <h3>EnergieAG <br> (Wertstatt8 GmbH)</h3>
+              <p>Product Owner <br>
+                Software Engineer <br>
+                Innovation Engineer
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- timeline -->
-      <div class="container mx-auto w-full h-full">
-        <div class="relative wrap overflow-hidden p-10 h-full">
-          <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
-          <!-- right timeline -->
-          <div class="mb-8 flex justify-between items-center w-full right-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
-            </div>
-            <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 class="mb-3 font-bold text-gray-800 text-xl">Lorem Ipsum</h3>
-              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Lorem Ipsum is simply dummy
-                text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book.</p>
+          <div class="section">
+            <div class="bead"></div>
+            <div class="content">
+              <h3>Raiffeisen Software GmbH</h3>
+              <p>Full-Stack Developer <br>
+                Project Lead <br>
+                Enabler
+              </p>
             </div>
           </div>
-
-          <!-- left timeline -->
-          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
-            </div>
-            <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 class="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
-              <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is
-                simply
-                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book.</p>
+          <div class="section">
+            <div class="bead"></div>
+            <div class="content">
+              <h3>W4 Premium Web GmbH</h3>
+              <p>Web (PWA) Developer <br>
+                Product Owner <br>
+                Intern
+              </p>
             </div>
           </div>
-
-          <!-- right timeline -->
-          <div class="mb-8 flex justify-between items-center w-full right-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
-            </div>
-            <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 class="mb-3 font-bold text-gray-800 text-xl">Lorem Ipsum</h3>
-              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Lorem Ipsum is simply dummy
-                text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book.</p>
+          <div class="section">
+            <div class="bead"></div>
+            <div class="content">
+              <h3>University of Applied Sciences <br> Hagenberg</h3>
+              <p>Student <br>
+                Focus on Web-Development</p>
             </div>
           </div>
-
-          <!-- left timeline -->
-          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
-            </div>
-            <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 class="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
-              <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is
-                simply
-                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book.</p>
-            </div>
+          <div class="section">
+            <div class="progress-done" data-done="50">goal</div>
           </div>
         </div>
       </div>
-    </main>
+      <a about="blank" onclick="window.open('/CV_Daniel_Kroiss.pdf', '_blank'); return false;" class="btn">Curriculum Vitae</a>
+    </section>
 
+    <!-- MY Skills -->
+    <section class="skill-section" id="skills">
+      <h2 class="section__title section__title--services">Tech-Skills</h2>
+      <div class="skills">
+        <div class="card">
+          <i class="fab fa-js-square fa-7x"></i>
+        </div>
+        <div class="card">
+          <i class="fab fa-angular fa-7x"></i>
+        </div>
+        <div class="card">
+          <i class="fab fa-java fa-7x"></i>
+        </div>
+        <div class="card">
+          <i class="fab fa-php fa-7x"></i>
+        </div>
+        <div class="card">
+          <i class="fab fa-css3-alt fa-7x"></i>
+        </div>
+        <div class="card">
+          <i class="fab fa-node fa-7x"></i>
+        </div>
+        <div class="card">
+          <i class="fas fa-code-branch fa-7x"></i>
+        </div>
+        <div class="card">
+          <i class="fab fa-docker fa-7x"></i>
+        </div>
+        <div class="card">
+          <i class="fab fa-vuejs fa-7x"></i>
+        </div>
+      </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="mailto:hello@daniel-kroiss.com" class="footer__link">hello@daniel-kroiss.com</a>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://www.linkedin.com/in/daniel-kroi%C3%9F/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="./bundle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+          integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
   </body>
 </html>
