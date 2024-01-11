@@ -22,7 +22,15 @@ module.exports = {
                 generator: {
                     filename: 'images/[name][ext]'
                 }
-            }
+            },
+            {
+                test: /\.(pdf)$/i,
+                loader: 'file-loader',
+                options: {
+                    outputPath: '/assets/',
+                    name: '[name].[ext]',
+                },
+            },
         ],
     },
     devServer: {

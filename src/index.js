@@ -16,6 +16,7 @@ import './images/teide.jpg';
 
 import './images/favicon-32x32.png';
 
+import pdfFile from './assets/CV_Daniel_Kroiss.pdf';
 
 import './timeline.js'
 
