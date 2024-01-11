@@ -2,17 +2,12 @@ import './styles/style.css';
 import './styles/progress.css';
 import './styles/queries.css';
 import './images/daniel-1.jpg';
-// import './images/daniel-1.avif';
-// import './images/daniel-1.webp';
 
 import './images/fav-icon-dk.jpg';
 
 import './images/programming.jpg';
-// import './images/programming.avif';
 
 import './images/daniel_highlands.jpeg';
-// import './images/teide.avif';
-// import './images/teide.webp';
 
 import './images/favicon-32x32.png';
 
