@@ -10,7 +10,7 @@ import './images/fav-icon-dk.jpg';
 import './images/programming.jpg';
 // import './images/programming.avif';
 
-import './images/teide.jpg';
+import './images/daniel_highlands.jpeg';
 // import './images/teide.avif';
 // import './images/teide.webp';
 
@@ -43,7 +43,6 @@ window.addEventListener("load", function (event) {
       /\S/g,
       "<span class='letter'>$&</span>"
   );
-
   anime
       .timeline({ loop: true })
       .add({
@@ -62,24 +61,3 @@ window.addEventListener("load", function (event) {
       });
 });
 
-// fills progressbars
-let initiated = false;
-
-function scrollListener() {
-  const element = document.getElementsByClassName("progress-done")[0];
-  const position = element.getBoundingClientRect();
-  // checking for partial visibility
-  if (position.top < window.innerHeight && position.bottom >= 0) {
-    if (!initiated) {
-      const progress = document.getElementsByClassName("progress-done");
-      for (const el of progress) {
-        el.style.width = el.getAttribute("data-done") + "%";
-        el.style.opacity = 1;
-      }
-      initiated = true;
-      window.removeEventListener("scroll", scrollListener);
-    }
-  }
-}
-
-window.addEventListener("scroll", scrollListener);
