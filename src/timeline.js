@@ -12,6 +12,7 @@ function scrollHandler() {
     const sections = qs('.section', true);
     const timeline = qs('.timeline');
     const line = qs('.line');
+    line.style.display = 'block';
     line.style.bottom = `calc(100% - 20px)`;
     let prevScrollY = window.scrollY;
     let up, down;
@@ -24,8 +25,7 @@ function scrollHandler() {
     up = scrollY < prevScrollY;
     down = !up;
     const timelineRect = timeline.getBoundingClientRect();
-    const lineRect = line.getBoundingClientRect(); // const lineHeight = lineRect.bottom - lineRect.top;
-
+    const lineRect = line.getBoundingClientRect();
     const dist = targetY - timelineRect.top;
 
     if (down && !full) {
@@ -39,13 +39,12 @@ function scrollHandler() {
     }
 
     sections.forEach(item => {
-        // console.log(item);
-        const rect = item.getBoundingClientRect(); //     console.log(rect);
+        const rect = item.getBoundingClientRect(); //
 
         if (rect.top + item.offsetHeight / 15 < targetY) {
             item.classList.add('show-me');
         }
-    }); // console.log(up, down);
+    });
 
     prevScrollY = window.scrollY;
 }
@@ -54,5 +53,4 @@ window.addEventListener("load", () => {
     scrollHandler();
 });
 
-document.querySelector('.line').style.display = 'block';
 window.addEventListener('scroll', scrollHandler);
