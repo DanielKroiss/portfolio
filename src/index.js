@@ -7,7 +7,7 @@ import './images/fav-icon-dk.jpg';
 
 import './images/programming.jpg';
 
-import './images/daniel_highlands.jpeg';
+import './images/daniel_highlands.jpg';
 
 import './images/favicon-32x32.png';
 
