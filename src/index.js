@@ -16,20 +16,7 @@ import pdfFile from './assets/CV_Daniel_Kroiss.pdf';
 import './timeline.js'
 
 
-const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelectorAll(".nav__link");
 
-if (navToggle && navLinks) {
-  navToggle.addEventListener("click", () => {
-    document.body.classList.toggle("nav-open");
-  });
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      document.body.classList.remove("nav-open");
-    });
-  });
-}
 
 // animated job title
 window.addEventListener("load", function (event) {
@@ -54,5 +41,20 @@ window.addEventListener("load", function (event) {
         easing: "easeOutExpo",
         delay: 1000000,
       });
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelectorAll(".nav__link");
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+            document.body.classList.toggle("nav-open");
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                document.body.classList.remove("nav-open");
+            });
+        });
+    }
 });
 
